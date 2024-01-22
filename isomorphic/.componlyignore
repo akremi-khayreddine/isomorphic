@@ -1,0 +1,8 @@
+
+              .github
+              .gitlab
+              .storybook
+              .componly
+              public
+              node_modules
+              
