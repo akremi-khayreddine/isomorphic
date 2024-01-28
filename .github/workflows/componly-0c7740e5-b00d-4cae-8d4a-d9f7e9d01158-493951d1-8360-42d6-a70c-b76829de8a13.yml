@@ -48,11 +48,11 @@ jobs:
                 if [[ "${{ matrix.workspaces}}" != "empty" ]]; then
                     pwd
                     pushd ${{ matrix.workspaces }} 
-                    yarn install --cache-folder ~/.cache/yarn --no-lockfile && yarn add @componly/core@next  @componly/cli@next  @componly/schemas  axios -D --no-lockfile --cache-folder ~/.cache/yarn
+                    yarn install --cache-folder ~/.cache/yarn --no-lockfile && yarn add @componly/core  @componly/cli  @componly/schemas  axios -D --no-lockfile --cache-folder ~/.cache/yarn
                     popd
                 else
                     echo "No workspaces to install. Running 'yarn install' in the root directory."
-                    yarn install --cache-folder ~/.cache/yarn --no-lockfile && yarn  add @componly/core@next  @componly/cli@next  @componly/schemas  axios -D --no-lockfile --cache-folder ~/.cache/yarn
+                    yarn install --cache-folder ~/.cache/yarn --no-lockfile && yarn  add @componly/core  @componly/cli  @componly/schemas  axios -D --no-lockfile --cache-folder ~/.cache/yarn
                 fi
       
       - name: Scan
